@@ -17,6 +17,7 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+        supportActionBar?.hide()
 
         var cold_drinks: Button = findViewById(R.id.button_cold_drinks) as Button
         var hot_drinks: Button = findViewById(R.id.button_hot_drinks) as Button

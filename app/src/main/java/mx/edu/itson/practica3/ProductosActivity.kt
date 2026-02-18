@@ -21,6 +21,8 @@ class ProductosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_productos)
+        supportActionBar?.hide()
+
         var menuOption: String? = intent.getStringExtra("menuType")
         agregarProductor(menuOption)
         var listview: ListView = findViewById(R.id.litview) as ListView
@@ -31,7 +33,7 @@ class ProductosActivity : AppCompatActivity() {
 
     fun agregarProductor(Option: String?) {
         when(Option){
-            "Cold_Driks" ->{
+            "Cold_Drinks" ->{
                 menu.add(Product("Jarritos", R.drawable.jarritos, " Sodas de jarritos de todos los sabores",2.75))
                 menu.add(Product("Sodas", R.drawable.sodas, " Sodas de todos los sabores",2.99))
                 menu.add(Product("Caguama", R.drawable.caguama, "Caguama ballena",3.99))
@@ -94,15 +96,15 @@ class ProductosActivity : AppCompatActivity() {
         }
 
         override fun getCount(): Int {
-            TODO("Not yet implemented")
+            return productos.size
         }
 
         override fun getItem(position: Int): Any? {
-            TODO("Not yet implemented")
+            return productos[position]
         }
 
         override fun getItemId(position: Int): Long {
-            TODO("Not yet implemented")
+            return position.toLong()
         }
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View? {
