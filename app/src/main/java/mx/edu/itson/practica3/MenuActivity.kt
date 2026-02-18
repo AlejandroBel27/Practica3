@@ -29,34 +29,40 @@ class MenuActivity : AppCompatActivity() {
 
         cold_drinks.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType", "Cold_Drinks")
+            intent.putExtra("menuType","Cold_Drinks")
+            intent.putExtra("Cold_Drinks", R.drawable.drinks)
             startActivity(intent)
         }
 
         hot_drinks.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType", "Hot_Drinks")
+            intent.putExtra("menuType","Hot_Drinks")
+            intent.putExtra("Hot_Drinks", R.drawable.drinks)
             startActivity(intent)
 
         }
         combos.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType", "Combos")
+            intent.putExtra("menuType","Combos")
+            intent.putExtra("Combos", R.drawable.combinations)
             startActivity(intent)
         }
         salties.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType", "Salties")
+            intent.putExtra("menuType","Salties")
+            intent.putExtra("Salties", R.drawable.antojitos)
             startActivity(intent)
         }
         custom.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType", "custom")
+            intent.putExtra("menuType","Custom")
+            intent.putExtra("Custom", R.drawable.especialidades)
             startActivity(intent)
         }
         sweets.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType", "sweets")
+            intent.putExtra("menuType","Sweets")
+            intent.putExtra("Sweets", R.drawable.especialidades)
             startActivity(intent)
         }
 
