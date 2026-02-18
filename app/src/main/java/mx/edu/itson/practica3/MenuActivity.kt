@@ -19,50 +19,44 @@ class MenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
         supportActionBar?.hide()
 
-        var cold_drinks: Button = findViewById(R.id.button_cold_drinks) as Button
-        var hot_drinks: Button = findViewById(R.id.button_hot_drinks) as Button
-        var combos: Button = findViewById(R.id.button_combos) as Button
-        var salties: Button = findViewById(R.id.button_salties) as Button
-        var custom: Button = findViewById(R.id.button_custom) as Button
-        var sweets: Button = findViewById(R.id.button_sweets) as Button
+        var Antojitos: Button = findViewById(R.id.button_Antojitos) as Button
+        var Especialidades: Button = findViewById(R.id.button_Especialidades) as Button
+        var Combinations: Button = findViewById(R.id.button_combinations) as Button
+        var Tortas: Button = findViewById(R.id.button_Tortas) as Button
+        var Sopas: Button = findViewById(R.id.button_Sopas) as Button
+        var Drinks: Button = findViewById(R.id.button_Drinks) as Button
 
 
-        cold_drinks.setOnClickListener {
+        Antojitos.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType","Cold_Drinks")
-            intent.putExtra("Cold_Drinks", R.drawable.drinks)
+            intent.putExtra("menuType","Antojitos")
             startActivity(intent)
         }
 
-        hot_drinks.setOnClickListener {
+        Especialidades.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType","Hot_Drinks")
-            intent.putExtra("Hot_Drinks", R.drawable.drinks)
+            intent.putExtra("menuType","Especialidades")
             startActivity(intent)
 
         }
-        combos.setOnClickListener {
+        Combinations.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType","Combos")
-            intent.putExtra("Combos", R.drawable.combinations)
+            intent.putExtra("menuType","Combinations")
             startActivity(intent)
         }
-        salties.setOnClickListener {
+        Tortas.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType","Salties")
-            intent.putExtra("Salties", R.drawable.antojitos)
+            intent.putExtra("menuType","Tortas")
             startActivity(intent)
         }
-        custom.setOnClickListener {
+        Sopas.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType","Custom")
-            intent.putExtra("Custom", R.drawable.especialidades)
+            intent.putExtra("menuType","Sopas")
             startActivity(intent)
         }
-        sweets.setOnClickListener {
+        Drinks.setOnClickListener {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
-            intent.putExtra("menuType","Sweets")
-            intent.putExtra("Sweets", R.drawable.especialidades)
+            intent.putExtra("menuType","Drinks")
             startActivity(intent)
         }
 

@@ -32,9 +32,9 @@
         android:layout_height="wrap_content"
         android:columnCount="2"
         android:layout_marginTop="20dp"
-        android:paddingHorizontal="60dp">
+        android:paddingHorizontal="50dp">
         <Button
-            android:text="@string/cold_drinks"
+            android:text="@string/Antojitos"
             android:textColor="@color/white"
             android:background="@drawable/round_button"
             android:layout_marginBottom="@dimen/input_margin"
@@ -44,10 +44,10 @@
             android:layout_columnWeight="1"
             android:textSize="@dimen/menu_buttons_text"
             android:paddingVertical="@dimen/menu_buttons_paddings"
-            android:id="@+id/button_cold_drinks"/>
+            android:id="@+id/button_Antojitos"/>
 
         <Button
-            android:text="@string/hot_drinks"
+            android:text="@string/Especialidades"
             android:textColor="@color/white"
             android:background="@drawable/round_button"
             android:layout_marginBottom="@dimen/input_margin"
@@ -57,10 +57,10 @@
             android:layout_columnWeight="1"
             android:textSize="@dimen/menu_buttons_text"
             android:paddingVertical="@dimen/menu_buttons_paddings"
-            android:id="@+id/button_hot_drinks"/>
+            android:id="@+id/button_Especialidades"/>
 
         <Button
-            android:text="@string/combos"
+            android:text="@string/Combinations"
             android:textColor="@color/white"
             android:background="@drawable/round_button"
             android:layout_marginBottom="@dimen/input_margin"
@@ -70,9 +70,9 @@
             android:layout_columnWeight="1"
             android:textSize="@dimen/menu_buttons_text"
             android:paddingVertical="@dimen/menu_buttons_paddings"
-            android:id="@+id/button_combos"/>
+            android:id="@+id/button_combinations"/>
         <Button
-            android:text="@string/salties"
+            android:text="@string/Tortas"
             android:textColor="@color/white"
             android:background="@drawable/round_button"
             android:layout_marginBottom="@dimen/input_margin"
@@ -82,9 +82,9 @@
             android:layout_columnWeight="1"
             android:textSize="@dimen/menu_buttons_text"
             android:paddingVertical="@dimen/menu_buttons_paddings"
-            android:id="@+id/button_salties"/>
+            android:id="@+id/button_Tortas"/>
         <Button
-            android:text="@string/custom"
+            android:text="@string/Sopas"
             android:textColor="@color/white"
             android:background="@drawable/round_button"
             android:layout_marginBottom="@dimen/input_margin"
@@ -94,10 +94,10 @@
             android:layout_columnWeight="1"
             android:textSize="@dimen/menu_buttons_text"
             android:paddingVertical="@dimen/menu_buttons_paddings"
-            android:id="@+id/button_custom"/>
+            android:id="@+id/button_Sopas"/>
 
         <Button
-            android:text="@string/sweets"
+            android:text="@string/Drinks"
             android:textColor="@color/white"
             android:backgroundTint="@color/rojo"
             android:background="@drawable/round_button"
@@ -108,7 +108,7 @@
             android:layout_columnWeight="1"
             android:textSize="@dimen/menu_buttons_text"
             android:paddingVertical="@dimen/menu_buttons_paddings"
-            android:id="@+id/button_sweets"/>
+            android:id="@+id/button_Drinks"/>
     </GridLayout>
 
 

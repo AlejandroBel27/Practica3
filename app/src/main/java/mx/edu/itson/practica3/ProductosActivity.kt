@@ -33,7 +33,7 @@ class ProductosActivity : AppCompatActivity() {
 
     fun agregarProductor(Option: String?) {
         when(Option){
-            "Cold_Drinks" ->{
+            "Drinks" ->{
                 menu.add(Product("Jarritos", R.drawable.jarritos, " Sodas de jarritos de todos los sabores",2.75))
                 menu.add(Product("Sodas", R.drawable.sodas, " Sodas de todos los sabores",2.99))
                 menu.add(Product("Caguama", R.drawable.caguama, "Caguama ballena",3.99))
@@ -41,43 +41,33 @@ class ProductosActivity : AppCompatActivity() {
                 menu.add(Product("Cervesas", R.drawable.domesticbeer, "Todo tipos de cerveza",5.75))
             }
 
-            "Hot_Drinks" ->{
+            "Especialidades" ->{
+                menu.add(Product("Quesadillas de Fajitas", R.drawable.fajitaquesadilla, " Cinco tacos ", 6.29))
+                menu.add(Product("Burritos ", R.drawable.burritos, " Cinco tacos ", 6.29))
+            }
+            "Combinations" ->{
+                menu.add(Product("Cinco Tacos", R.drawable.cinco, " Cinco tacos ", 6.29))
+                menu.add(Product("Charolazo", R.drawable.charolazo, "Charola con 5 Chelas", 24.49))
+                menu.add(Product("Los Portales Burritos", R.drawable.burritosportales, "Large flour tortilla filled with grilled cactus, steak, pastor (seasoned pork), grilled onions, rice and beans. Served with a side of lettuce salad, tomatoes, sour cream and guacamole.", 14.59))
 
             }
-            "Combos" ->{
-                menu.add(Product("Quesadillas", R.drawable.quesadillas, "Rellenas con su carne favorita, servidas con ensalada - Filled with your choice of meat, served with salad.", 6.29))
-                menu.add(Product("Huaraches", R.drawable.huaraches, "Tortilla gruesa con frijoles, tu carne favorita, lechuga, queso fresco y crema - Big thick tortilla with beans, your choice of meat, fresh cheese, and sour cream.", 11.49))
-                menu.add(Product("Gringas", R.drawable.gringas, "Tortilla de harina con queso, carne al pastor y piña. Flour tortilla filled with cheese, marinated pork and pineapple.", 8.39))
-                menu.add(Product("Sincronizadas", R.drawable.sincronizadas, "Tortilla de harina rellena con queso y jamón. Acompañada de lechuga, crema y guacamole. Two four tortillas filled with ham and cheese. Served with lettuce, sour cream, and guacamole.", 7.99))
-                menu.add(Product("Sopes", R.drawable.sopes, "Tortilla gruesa cubierta de frijoles, tu carne favorita, lechuga, queso fresco y crema. Fried thick tortilla with beans, your choice of meat, lettuce, fresh cheese, and sour cream.", 3.99))
-                menu.add(Product("Tostadas", R.drawable.tostadas, "Tortilla frita con frijoles, tu carne favorita, lechuga, queso fresco, crema y jitomate. Fried tortilla with beans, your choice of meat, lettuce, fresh cheese, sour cream and tomatoes.", 4.59))
+            "Tortas" ->{
+                menu.add(Product("Torta", R.drawable.torta, "All tortas come with lettuce, onions, tomatoes, avocado, sour cream, jalapeno pepper and your choice of meat.", 13.39))
+                menu.add(Product("Torta Mixta", R.drawable.tortamixta, "Chorizo, asada y pastor. Mexican sausage, steak and marinated pork." , 13.99))
+                menu.add(Product("Torta Milanesa", R.drawable.tortamilanesa, "Breaded Stake served with lettuce, sour cream, and guacamole", 13.99))
+                menu.add(Product("Torta Cubana", R.drawable.tortacubana, "Chorizo, asada, jamon, pastor y queso. Mexican sausage, steak, marinated pork, ham, and cheese.", 14.49))
 
             }
-            "Salties" ->{
-                menu.add(Product("Quesadillas", R.drawable.quesadillas, "Rellenas con su carne favorita, servidas con ensalada - Filled with your choice of meat, served with salad.", 6.29))
-                menu.add(Product("Huaraches", R.drawable.huaraches, "Tortilla gruesa con frijoles, tu carne favorita, lechuga, queso fresco y crema - Big thick tortilla with beans, your choice of meat, fresh cheese, and sour cream.", 11.49))
-                menu.add(Product("Gringas", R.drawable.gringas, "Tortilla de harina con queso, carne al pastor y piña. Flour tortilla filled with cheese, marinated pork and pineapple.", 8.39))
-                menu.add(Product("Sincronizadas", R.drawable.sincronizadas, "Tortilla de harina rellena con queso y jamón. Acompañada de lechuga, crema y guacamole. Two four tortillas filled with ham and cheese. Served with lettuce, sour cream, and guacamole.", 7.99))
-                menu.add(Product("Sopes", R.drawable.sopes, "Tortilla gruesa cubierta de frijoles, tu carne favorita, lechuga, queso fresco y crema. Fried thick tortilla with beans, your choice of meat, lettuce, fresh cheese, and sour cream.", 3.99))
-                menu.add(Product("Tostadas", R.drawable.tostadas, "Tortilla frita con frijoles, tu carne favorita, lechuga, queso fresco, crema y jitomate. Fried tortilla with beans, your choice of meat, lettuce, fresh cheese, sour cream and tomatoes.", 4.59))
+            "Sopas" ->{
+                menu.add(Product("Pozole", R.drawable.pozole, " Cinco tacos ", 6.29))
+                menu.add(Product("Caldo de camaron", R.drawable.caldocamaron, " Cinco tacos ", 6.29))
+                menu.add(Product("Menudo", R.drawable.menudo, " Cinco tacos ", 6.29))
+                menu.add(Product("Sopa de Mariscos", R.drawable.sopamariscos, " Cinco tacos ", 6.29))
 
             }
-            "custom" ->{
-                menu.add(Product("Quesadillas", R.drawable.quesadillas, "Rellenas con su carne favorita, servidas con ensalada - Filled with your choice of meat, served with salad.", 6.29))
-                menu.add(Product("Huaraches", R.drawable.huaraches, "Tortilla gruesa con frijoles, tu carne favorita, lechuga, queso fresco y crema - Big thick tortilla with beans, your choice of meat, fresh cheese, and sour cream.", 11.49))
-                menu.add(Product("Gringas", R.drawable.gringas, "Tortilla de harina con queso, carne al pastor y piña. Flour tortilla filled with cheese, marinated pork and pineapple.", 8.39))
-                menu.add(Product("Sincronizadas", R.drawable.sincronizadas, "Tortilla de harina rellena con queso y jamón. Acompañada de lechuga, crema y guacamole. Two four tortillas filled with ham and cheese. Served with lettuce, sour cream, and guacamole.", 7.99))
-                menu.add(Product("Sopes", R.drawable.sopes, "Tortilla gruesa cubierta de frijoles, tu carne favorita, lechuga, queso fresco y crema. Fried thick tortilla with beans, your choice of meat, lettuce, fresh cheese, and sour cream.", 3.99))
-                menu.add(Product("Tostadas", R.drawable.tostadas, "Tortilla frita con frijoles, tu carne favorita, lechuga, queso fresco, crema y jitomate. Fried tortilla with beans, your choice of meat, lettuce, fresh cheese, sour cream and tomatoes.", 4.59))
-
-            }
-            "sweets" ->{
-                menu.add(Product("Quesadillas", R.drawable.quesadillas, "Rellenas con su carne favorita, servidas con ensalada - Filled with your choice of meat, served with salad.", 6.29))
-                menu.add(Product("Huaraches", R.drawable.huaraches, "Tortilla gruesa con frijoles, tu carne favorita, lechuga, queso fresco y crema - Big thick tortilla with beans, your choice of meat, fresh cheese, and sour cream.", 11.49))
-                menu.add(Product("Gringas", R.drawable.gringas, "Tortilla de harina con queso, carne al pastor y piña. Flour tortilla filled with cheese, marinated pork and pineapple.", 8.39))
-                menu.add(Product("Sincronizadas", R.drawable.sincronizadas, "Tortilla de harina rellena con queso y jamón. Acompañada de lechuga, crema y guacamole. Two four tortillas filled with ham and cheese. Served with lettuce, sour cream, and guacamole.", 7.99))
-                menu.add(Product("Sopes", R.drawable.sopes, "Tortilla gruesa cubierta de frijoles, tu carne favorita, lechuga, queso fresco y crema. Fried thick tortilla with beans, your choice of meat, lettuce, fresh cheese, and sour cream.", 3.99))
-                menu.add(Product("Tostadas", R.drawable.tostadas, "Tortilla frita con frijoles, tu carne favorita, lechuga, queso fresco, crema y jitomate. Fried tortilla with beans, your choice of meat, lettuce, fresh cheese, sour cream and tomatoes.", 4.59))
+            "Antojitos" ->{
+                menu.add(Product("Cinco Tacos", R.drawable.cinco, " Cinco tacos ", 6.29))
+                menu.add(Product("coctel", R.drawable.coctel, " Cinco tacos ", 6.29))
 
             }
 
