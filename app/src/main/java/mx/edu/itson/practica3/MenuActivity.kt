@@ -16,6 +16,8 @@ import mx.edu.itson.practica3.R
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+
         setContentView(R.layout.activity_menu)
         supportActionBar?.hide()
 
@@ -58,6 +60,11 @@ class MenuActivity : AppCompatActivity() {
             var intent: Intent = Intent(this, ProductosActivity::class.java)
             intent.putExtra("menuType","Drinks")
             startActivity(intent)
+        }
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
 
     }

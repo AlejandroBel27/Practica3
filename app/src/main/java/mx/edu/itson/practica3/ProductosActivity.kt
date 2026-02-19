@@ -12,8 +12,8 @@ import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
-
 import androidx.core.view.WindowInsetsCompat
+
 
 class ProductosActivity : AppCompatActivity() {
     var menu: ArrayList<Product> = ArrayList<Product>()
@@ -21,15 +21,47 @@ class ProductosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_productos)
+        enableEdgeToEdge()
+
         supportActionBar?.hide()
 
         var menuOption: String? = intent.getStringExtra("menuType")
         agregarProductor(menuOption)
+        var imagen: ImageView = findViewById(R.id.imageView)
+        when (menuOption){
+            "Drinks" ->{
+                imagen.setImageResource(R.drawable.drinks)
+            }
+            "Especialidades" ->{
+                imagen.setImageResource(R.drawable.especialidades)
+            }
+            "Combinations" ->{
+                imagen.setImageResource(R.drawable.combinations)
+            }
+            "Tortas" ->{
+                imagen.setImageResource(R.drawable.tortas)
+            }
+            "Sopas" ->{
+                imagen.setImageResource(R.drawable.sopas)
+            }
+            "Antojitos" ->{
+                imagen.setImageResource(R.drawable.antojitos)
+
+            }
+        }
         var listview: ListView = findViewById(R.id.litview) as ListView
         var adaptador: AdaptadorProductos = AdaptadorProductos(this, menu)
         listview.adapter = adaptador
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
     }
+
+
 
     fun agregarProductor(Option: String?) {
         when(Option){
@@ -44,6 +76,7 @@ class ProductosActivity : AppCompatActivity() {
             "Especialidades" ->{
                 menu.add(Product("Quesadillas de Fajitas", R.drawable.fajitaquesadilla, " Cinco tacos ", 6.29))
                 menu.add(Product("Burritos ", R.drawable.burritos, " Cinco tacos ", 6.29))
+                menu.add(Product("Ceviche",R.drawable.ceviche,"Ceviche de pescado",5.99))
             }
             "Combinations" ->{
                 menu.add(Product("Cinco Tacos", R.drawable.cinco, " Cinco tacos ", 6.29))
@@ -68,6 +101,7 @@ class ProductosActivity : AppCompatActivity() {
             "Antojitos" ->{
                 menu.add(Product("Cinco Tacos", R.drawable.cinco, " Cinco tacos ", 6.29))
                 menu.add(Product("coctel", R.drawable.coctel, " Cinco tacos ", 6.29))
+
 
             }
 
